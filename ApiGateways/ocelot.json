@@ -1,0 +1,19 @@
+{
+    "Routes":[      
+        {
+            "DownstreamPathTemplate": "/api/catalog/",
+            "DownstreamScheme": "http",
+            "ServiceName":"catalogService",
+            "UpstreamPathTemplate": "/api/gateway/catalog/"
+          }
+        
+        
+    ],
+    "GlobalConfiguration":{
+       "ServiceDiscoveryProvider":{ 
+           "Host":"localhost",
+           "Port": "8500",
+           "Type": "Consul"
+       }
+    }
+}
